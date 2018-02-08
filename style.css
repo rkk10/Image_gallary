@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+section{
+    height: 100vh;
+    display: flex;
+}
+.image{
+    flex: 1;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: font-size 0.5s ease-in-out, flex 0.5s ease-in-out;
+    color: white;
+}
+
+
+.image > * {
+   flex: 1 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: bolder;
+}
+#second{
+    background-image: url('./images/dyr_1024.jpg')
+}
+#third{
+    background-image: url('./images/libarty.jpg')
+}
+#fourth{
+    background-image: url('./images/monasteries-12v.jpg')
+}
+#fifth{
+    background-image: url('./images/roads-22v.jpg')
+}
+#sixth{
+    background-image: url('./images/roads-25a.jpg')
+}
+#first{
+    background-image: url('./images/taj3h.jpg')
+}
+p{
+    transition: 0.7s ease-in-out;
+}
+
+.image.open{
+    flex: 8;
+    font-size: 40px;
+}
+
+.image > *:first-child{transform: translateY(-100%);}
+.open_active > *:first-child{transform: translateY(0%);} 
+.image > *:last-child{transform: translateY(100%)}
+.open_active > *:last-child{transform: translateY(0%);} 
+
